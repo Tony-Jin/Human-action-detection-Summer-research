@@ -1,5 +1,4 @@
-﻿
-walk 15 
+﻿walk 15 
 StartTime: 2017-07-12 12:08:11.416
 Time(s)	ax(g)	ay(g)	az(g)	wx(deg/s)	wy(deg/s)	wz(deg/s)	AngleX(deg)	AngleY(deg)	AngleZ(deg)	T(°)	hx	hy	hz	Pressure(Pa)	Altitude(m) 
 270.354	-1.2451	0.1226	1.8232	5.1880	7.9346	18.2495	5.1251	33.0853	147.9749	40.7400	50	-240	284	100959	0.30 
