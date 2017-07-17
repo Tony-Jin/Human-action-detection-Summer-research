@@ -8,19 +8,19 @@ for i = 1:1:length(Times)
 end
 
 subplot(4,1,1);
-plot(Times,Acc); xlabel('Time (s) 20 Steps'); ylabel('Acc (g)');
-title('Figure 1: Acc Against Time While Walking'); hold on;
+plot(Times,Acc); xlabel('Time (s) 10 Steps'); ylabel('Acc (g)');
+title('Figure 1: Acc Against Time While Running'); hold on;
 
 subplot(4,1,2);
-plot(Times,Gyro); xlabel('Times (s) 20 Steps'); ylabel('Angular Velocity (deg/s)');
-title('Figure 2: Angular Velocity Against Time While Walking'); hold on;
+plot(Times,Gyro); xlabel('Times (s) 10 Steps'); ylabel('Angular Velocity (deg/s)');
+title('Figure 2: Angular Velocity Against Time While Running'); hold on;
 
 subplot(4,1,3);
-plot(Times,hx,Times,hy,Times,hz); xlabel('Time (s) 20 Steps'); ylabel('Magnetism (deg)');
-title('Figure 3: Magnetism Against Time While Walking'); hold on;
+plot(Times,hx,Times,hy,Times,hz); xlabel('Time (s) 10 Steps'); ylabel('Magnetism (deg)');
+title('Figure 3: Magnetism Against Time While Running'); hold on;
 
 subplot(4,1,4);
-plot(Times,PressurePa); xlabel('Time (s) 20 Steps'); ylabel('Pressure (Pa)');
-title('Figure 4: Pressure Against Time While Walking'); hold on;
+plot(Times,PressurePa); xlabel('Time (s) 10 Steps'); ylabel('Pressure (Pa)');
+title('Figure 4: Pressure Against Time While Running'); hold on;
 
 clear all
