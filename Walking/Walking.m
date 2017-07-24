@@ -1,5 +1,4 @@
 Acc = sqrt(axg.*axg+ayg.*ayg+azg.*azg);
-Gyro = sqrt(wxdegs.*wxdegs+wydegs.*wydegs+wzdegs.*wzdegs);
 
 maxAcc = Acc(1);
 for i = 2:1:length(Acc)
@@ -15,21 +14,8 @@ for i = 2:1:length(Acc)
     end
 end
 
-maxGyro = Gyro(1);
-for i = 2:1:length(Gyro)
-    if Gyro(i) > maxGyro
-        maxGyro = Gyro(i);
-    end
-end
-
-minGyro = Gyro(1);
-for i = 2:1:length(Gyro)
-    if Gyro(i) < minGyro
-        minGyro = Gyro(i);
-    end
-end
 
 maxAcc
 minAcc
-maxGyro
-minGyro
+
+clear all

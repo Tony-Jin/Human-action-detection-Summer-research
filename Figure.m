@@ -2,9 +2,9 @@ Acc = sqrt(axg.*axg+ayg.*ayg+azg.*azg);
 Gyro = sqrt(wxdegs.*wxdegs+wydegs.*wydegs+wzdegs.*wzdegs);
 
 % Make the first time to be zero
-Time1 = Times(1);
-for i = 1:1:length(Times)
-    Times(i) = Times(i) - Time1;
+Times(1) = 0;
+for i = 2:1:length(Times)
+    Times(i) = Times(i-1) + 0.035;
 end
 
 <<<<<<< HEAD
