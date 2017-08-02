@@ -4,18 +4,18 @@ Gyro = sqrt(wxdegs.*wxdegs+wydegs.*wydegs+wzdegs.*wzdegs);
 % Make the first time to be zero
 Times(1) = 0;
 for i = 2:1:length(Times)
-    Times(i) = Times(i-1) + 0.04;
+    Times(i) = Times(i-1) + 0.02;
 end
 
-subplot(3,1,1);
-plot(Times,Acc); xlabel('Time (s) 10 Steps'); ylabel('Acc (g)');
-title('Figure 1: Acc Against Time While Running'); hold on;
+%subplot(2,1,1);
+%plot(Times,Acc); xlabel('Time (s) 10 Steps'); ylabel('Acc (g)');
+%title('Figure 1: Acc Against Time While Running'); hold on;
 
-subplot(3,1,2);
-plot(Times,axg,'r',Times,ayg,'y',Times,azg,'b'); xlabel('Time (s) 10 Steps'); ylabel('Acc (g)');
-title('Figure 1: Acc Against Time While Running'); hold on;
+%subplot(1,1,1);
+%plot(Times,axg,'r',Times,ayg,'y',Times,azg,'b'); xlabel('Time (s) 10 Steps'); ylabel('Acc (g)');
+%title('Figure 1: Acc Against Time While Running'); hold on;
 
-subplot(3,1,3);
+subplot(1,1,1);
 plot(Times,Gyro); xlabel('Times (s) 10 Steps'); ylabel('Angular Velocity (deg/s)');
 title('Figure 2: Angular Velocity Against Time While Running'); hold on;
 
