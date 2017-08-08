@@ -15,8 +15,20 @@ for i = 1:1:length(PressurePa)
         dfffff(i) = (PressurePa(i) + PressurePa(i - 1))/2 - aveave(i - 2);
     end
 end
+
+reeeee = dfffff;
+for k = 1:1:length(dfffff)
+    if dfffff(i) < -2.2
+        reeeee(i) = 1;
+    elseif dfffff(i) > 2
+        reeeee(i) = -1;
+    else
+        re
+    
+    
+    
 subplot(2,1,1);
-plot(dfffff); hold on;
+plot(dfffff); hold on;grid on;
 subplot(2,1,2);
 plot(PressurePa); hold on;
         grid on;

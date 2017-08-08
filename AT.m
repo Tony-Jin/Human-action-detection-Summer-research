@@ -18,13 +18,21 @@ end
 
 reeeee = dfffff;
 for k = 1:1:length(dfffff)
-    if dfffff(i) < -2.2
-        reeeee
+    if dfffff(k) < -2.3
+        reeeee(k) = 1;
+    elseif dfffff(k) > 2
+        reeeee(k) = -1;
+    else
+        reeeee(k) = 0;
+    end
+end
     
     
     
-subplot(2,1,1);
+subplot(3,1,1);
 plot(dfffff); hold on;grid on;
-subplot(2,1,2);
+subplot(3,1,2);
 plot(PressurePa); hold on;
         grid on;
+        subplot(3,1,3);
+plot(reeeee); hold on;grid on;
