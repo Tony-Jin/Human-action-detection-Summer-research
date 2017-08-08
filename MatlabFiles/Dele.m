@@ -28,6 +28,14 @@ Result = linspace(0,0,length(PressurePa))';
 re = linspace(0,0,length(PressurePa))';
 sum1 = linspace(0,0,length(PressurePa))';
 sum = 0;
+
+angle = linspace(0,0,10)';
+angleSum = linspace(0,0,length(AngleYdeg));
+basicSum = 0;
+sit = linspace(0,0,length(AngleYdeg));
+c1 = 0;
+c2 = 0;
+c3 = 0;
 for i = 1:1:length(Acc)
     if Acc(i) > AccTher && flag == 1
         count1 = i;
@@ -69,6 +77,42 @@ for i = 1:1:length(Acc)
         %sum1(105) = sum;
         sum1(i) = sum;
     end
+    
+    if i < 11
+        angle(i) = AngleYdeg(i);%/32768*180;
+        basicSum = basicSum + angle(i);
+    else
+        for u = 1:1:9
+            angle(u) = angle(u + 1);
+        end
+        angle(10) = AngleYdeg(i);%/32768*180;
+        angleSum(i) = 0;
+        for v = 1:1:10
+            angleSum(i) = angleSum(i) + angle(v);
+        end
+        
+        base = (angleSum(i) - basicSum)/10;
+        
+        if base > 5.6 && c1 == 50
+            c2 = 0;
+            c3 = 0;
+            sit(i - 55) = 1;
+        elseif base > 5.6 && c1 < 50
+            c1 = c1 + 1;
+        elseif base <= 0 && c2 == 50
+            c1 = 0;
+            c3 = 0;
+            sit(i - 55) = -1;
+        elseif base <= 0 && c2 < 50
+            c2 = c2 + 1;
+        elseif base <= 5.6 && base > 0 && c3 == 50
+            c1 = 0;
+            c2 = 0;
+            sit(i - 55) = 0;
+        elseif base <= 5.6 && base > 0 && c3 < 50
+            c3 = c3 + 1;
+        end
+    end
 end
 
 %plot(AccMax); hold on;
@@ -77,10 +121,10 @@ end
 %plot(AccTher); hold on;
 %plot(AccPP)
 subplot(4,1,1);
-plot(Result); hold on;
+plot(sit); hold on;
 subplot(4,1,2);
 plot(Acc); hold on;
 subplot(4,1,3);
-plot(re); hold on;
+plot(Acco); hold on;
 subplot(4,1,4);
-plot(PressurePa); hold on;
+plot(AngleYdeg); hold on;
