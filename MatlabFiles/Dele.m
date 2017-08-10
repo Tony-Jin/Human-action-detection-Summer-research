@@ -38,18 +38,27 @@ c2 = 0;
 c3 = 0;
 for i = 1:1:length(Acc)
     if Acc(i) > AccTher && flag == 1
-        count1 = i;
+        AccTher = (Min+Max)/2;
+        Max = Acc(i);
         flag = 0;
-        Min = min(Acc(count2:count1,1:1:1));
+       % Min = min(Acc(count2:count1,1:1:1));
         if AccPP > 0.2
             countStep = countStep + 1;
         end
     elseif Acc(i) <= AccTher && flag == 0
-        count2 = i;
-        Max = max(Acc(count1:count2,1:1:1));
+        AccTher = (Min+Max)/2;
+        Min = Acc(i);
+       % count2 = i;
+      %  Max = max(Acc(count1:count2,1:1:1));
         flag = 1;
     end
-    AccTher = (Min+Max)/2;
+    if Acc(i) > Max && flag == 0
+        Max = Acc(i);
+    end
+    if Acc(i) < Min && flag == 1
+        Min = Acc(i);
+    end
+    
     if AccTher < 1.2
         AccTher = 1.2;
     end
