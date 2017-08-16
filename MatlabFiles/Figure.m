@@ -9,39 +9,39 @@ for i = 2:1:length(Times)
     Times(i) = Times(i-1) + 0.02;
 end
 
-<<<<<<< HEAD:Figure.m
-subplot(2,1,1);
-plot(Times,Acc); xlabel('Time (s) 10 Steps'); ylabel('Acc (g)');
-title('Figure 1: Acc Against Time While Running'); hold on;
-=======
-<<<<<<< HEAD
-subplot(4,1,1);
-p = plot(Times,Acc,'k'); set(p,'LineWidth',1.5); grid on;
-xlabel('Time (s)','FontSize',15,'FontName','Times');
-ylabel('Acc (g)','FontSize',15,'FontName','Times');
-title('Figure 1: Acceleration','FontSize',18,'FontName','Times'); hold on;
 
-subplot(4,1,2);
-p = plot(Times,Gyro,'k'); set(p,'LineWidth',1.5); grid on;
-xlabel('Time (s)','FontSize',15,'FontName','Times');
-ylabel('Angle Velocity (deg/s)','FontSize',15,'FontName','Times');
-title('Figure 2: Angle Velocity','FontSize',18,'FontName','Times'); hold on;
+%subplot(1,1,1);
+%plot(Times,Acc); xlabel('Time (s) 10 Steps'); ylabel('Acc (g)');
+%title('Figure 1: Acc Against Time While Running'); hold on;
 
-subplot(4,1,3);
-p = plot(Times,hx,Times,hy,Times,hz,'k'); set(p,'LineWidth',1.5); grid on;
-xlabel('Time (s)','FontSize',15,'FontName','Times');
-ylabel('Magnitude','FontSize',15,'FontName','Times');
-title('Figure 3: Magnitude','FontSize',18,'FontName','Times'); hold on;
 
-subplot(4,1,4);
-p = plot(Times,PressurePa,'k'); set(p,'LineWidth',1.5); grid on;
-xlabel('Time (s) 10 Steps'); ylabel('Pressure (Pa)');
-title('Figure 4: Pressure'); hold on;
-=======
+%subplot(4,1,1);
+%%p = plot(Times,Acc,'k'); set(p,'LineWidth',1.5); grid on;
+%xlabel('Time (s)','FontSize',15,'FontName','Times');
+%ylabel('Acc (g)','FontSize',15,'FontName','Times');
+%title('Figure 1: Acceleration','FontSize',18,'FontName','Times'); hold on;
+
+%subplot(4,1,2);
+%p = plot(Times,Gyro,'k'); set(p,'LineWidth',1.5); grid on;
+%xlabel('Time (s)','FontSize',15,'FontName','Times');
+%ylabel('Angle Velocity (deg/s)','FontSize',15,'FontName','Times');
+%title('Figure 2: Angle Velocity','FontSize',18,'FontName','Times'); hold on;
+
+%subplot(4,1,3);
+%p = plot(Times,hx,Times,hy,Times,hz,'k'); set(p,'LineWidth',1.5); grid on;
+%xlabel('Time (s)','FontSize',15,'FontName','Times');
+%ylabel('Magnitude','FontSize',15,'FontName','Times');
+%title('Figure 3: Magnitude','FontSize',18,'FontName','Times'); hold on;
+
+%subplot(4,1,4);
+%p = plot(Times,PressurePa,'k'); set(p,'LineWidth',1.5); grid on;
+%xlabel('Time (s) 10 Steps'); ylabel('Pressure (Pa)');
+%title('Figure 4: Pressure'); hold on;
+
 %subplot(2,1,1);
 %plot(Times,axg,'*-',Times,ayg,'y',Times,azg,'b'); xlabel('Time (s) 10 Steps'); ylabel('Acc (g)');
 %title('Figure 1: Acc Against Time While Running'); hold on;
->>>>>>> 335b5eca69338e6a980219250b468d8b9e6c6bc5:MatlabFiles/Figure.m
+
 
 %subplot(1,1,1);
 %plot(Times,Gyro,'*-'); xlabel('Times (s) 10 Steps'); ylabel('Angular Velocity (deg/s)');
@@ -59,10 +59,9 @@ title('Figure 4: Pressure'); hold on;
 %plot(Times,PressurePa,'*-'); xlabel('Time (s) 10 Steps'); ylabel('Pressure (Pa)');
 %title('Figure 4: Pressure Against Time While Running'); hold on;
 
-subplot(2,1,2);
+subplot(1,1,1);
 plot(Times,AngleXdeg,'r',Times,AngleYdeg,'*-',Times,AngleZdeg,'b');
 hold on;
 
->>>>>>> origin/master
 
 %clear all
